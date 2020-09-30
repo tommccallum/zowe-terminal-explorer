@@ -1,0 +1,31 @@
+#!/bin/bash
+
+ZOWE=$(which zowe)
+PYTHON=$(which python3)
+
+if [ "x$ZOWE" == "x" ]
+then
+  echo "Could not find zowe in PATH, please download and try again."
+fi
+if [ "x$PYTHON" == "x" ]
+then
+  echo "Could not locate python 3, please install and try again."
+fi
+
+# check for dependencies
+OK=1
+python -c "import curses"
+if [ $? -ne 0 ]
+then
+  OK=0
+  echo "Curses package not found"
+fi
+
+if [ $OK -gt 0 ]
+then
+	$PYTHON main.py
+	if [ $? -ne 0 ]
+	then
+	  stty sane
+	fi
+fi

@@ -11,6 +11,7 @@ Tested only on a Linux machine.
 
 ```
 git clone https://github.com/tommccallum/zowe-terminal-explorer
+cd zowe-terminal-explorer
 ./zte
 ```
 

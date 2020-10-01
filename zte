@@ -6,10 +6,12 @@ PYTHON=$(which python3)
 if [ "x$ZOWE" == "x" ]
 then
   echo "Could not find zowe in PATH, please download and try again."
+  exit 1
 fi
 if [ "x$PYTHON" == "x" ]
 then
   echo "Could not locate python 3, please install and try again."
+  exit 1
 fi
 
 # check for dependencies
@@ -19,6 +21,7 @@ if [ $? -ne 0 ]
 then
   OK=0
   echo "Curses package not found"
+  exit 1
 fi
 
 if [ $OK -gt 0 ]

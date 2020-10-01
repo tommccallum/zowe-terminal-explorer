@@ -16,7 +16,7 @@ fi
 
 # check for dependencies
 OK=1
-python -c "import curses"
+$PYTHON -c "import curses"
 if [ $? -ne 0 ]
 then
   OK=0

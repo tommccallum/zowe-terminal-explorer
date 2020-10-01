@@ -9,6 +9,16 @@ Written for the IBM Master The Mainframe 2000, this is a quick tool that allows 
 
 Tested only on a Linux machine.
 
+Notes to IBM Z testers:
+1. Have git installed.
+2. Requires Linux flavour with Python3 installed.  (will warn if not)
+3. Requires you to have Zowe installed locally and in your Path as per ZCLI1 instructions. (will warn if not)
+4. Requires you to have a Zowe profile already setup as per ZCLI1 instructions.
+(For example: ```zowe profiles create zosmf-profile zosmf --host <host> --port <port> --user <username> --password <password> --reject-unauthorized false```)
+5. Requires you to have Python 3 curses library installed (should be by default on most installations).
+7. If this command (```zowe jobs list jobs```) works for you, then so will Zowe Terminal Explorer.
+
+
 ```
 git clone https://github.com/tommccallum/zowe-terminal-explorer
 cd zowe-terminal-explorer
